@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    await m.reply_text("**✌️ʜᴇʟʟᴏ, ᴍʏ ꜰʀɪᴇɴᴅ🌝.**\n\n**ɪ ᴀᴍ @mradarshr ʙᴏᴛ.**\n**ɪ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜʀ ᴛᴇxᴛ ꜰɪʟᴇ ʟɪɴᴋꜱ.**")
+    await m.reply_text("**✌️ʜᴇʟʟᴏ, ᴍʏ ꜰʀɪᴇɴᴅ🌝.**\n\n**ɪ ᴀᴍ @teamshaurya01 ʙᴏᴛ.**\n**ɪ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜʀ ᴛᴇxᴛ ꜰɪʟᴇ ʟɪɴᴋꜱ.**")
 
 
 @bot.on_message(filters.command("stop"))
@@ -39,15 +39,15 @@ async def restart_handler(_, m: Message):
     await m.reply_text("**Stopped**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["txt"]))
+@bot.on_message(filters.command(["text"]))
 async def account_login(bot: Client, m: Message):
     try:
-        editable = await m.reply_text('SEND ME TEXT TO CONVERT INTO TXT FILE⚡️')
+        editable = await m.reply_text('**SEND ME TEXT TO CONVERT INTO TXT FILE⚡️**')
         input_msg = await bot.listen(editable.chat.id)
         raw_text = input_msg.text
         await input_msg.delete(True)
         
-        await editable.edit("Now send the file title")
+        await editable.edit("**Now send the file title**")
         input_msg = await bot.listen(editable.chat.id)
         raw_text0 = input_msg.text
         await input_msg.delete(True)
@@ -66,9 +66,9 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text('Failed: ' + str(e))
 
 
-@bot.on_message(filters.command(["babu"]))
+@bot.on_message(filters.command(["badsha1"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️')
+    editable = await m.reply_text('**𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -95,7 +95,7 @@ async def account_login(bot: Client, m: Message):
     raw_text0 = input1.text
     await input1.delete(True)
 
-    await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸**\n144,240,360,480,720,1080 please choose quality")
+    await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸**\n\n**144,240,360,480,720,1080**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -109,7 +109,7 @@ async def account_login(bot: Client, m: Message):
         "1080": "1920x1080"
     }.get(raw_text2, "UN")
 
-    await editable.edit("Now Enter A Name to mention on Downloaded by")
+    await editable.edit("**Now Enter A Name to mention on Downloaded by**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -175,11 +175,11 @@ async def account_login(bot: Client, m: Message):
 
             elif '/master.mpd' in url:
                 id = url.split("/")[-2]
-                url = f"https://pw.pwjarvis.tech?v={id}&quality={raw_text2}"
+                url = f"https://pw.jarviis.workers.dev?v={id}&quality={raw_text2}"
 
             elif 'penpencilvod.pc.cdn.bitgravity.com' in url:
                 id = url.split("/")[-2]
-                url = f"https://pw.pwjarvis.tech?v={id}&quality={raw_text2}"
+                url = f"https://pw.jarviis.workers.dev?v={id}&quality={raw_text2}"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
@@ -187,8 +187,8 @@ async def account_login(bot: Client, m: Message):
             ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]" if "youtu" in url else f"b[height<={raw_text2}]/bv[height<={raw_text2}]+ba/b/bv+ba"
             cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
-            cc = f"**📂 ғɪʟᴇɴᴀᴍᴇ :** {str(count).zfill(3)}) {name1}.mkv\n\n**ʙᴀᴛᴄʜ** » {raw_text0}\n\n**ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ »** {MR}"
-            cc1 = f"**📂 ғɪʟᴇɴᴀᴍᴇ :** {str(count).zfill(3)}) {name1}.pdf\n\n**ʙᴀᴛᴄʜ** » {raw_text0}\n\n**ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ »** {MR}"
+            cc = f"**{str(count).zfill(3)})** {name1}.mkv\n\n**ʙᴀᴛᴄʜ** » {raw_text0}\n\n**ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ »** {MR}"
+            cc1 = f"**{str(count).zfill(3)})** {name1}.pdf\n\n**ʙᴀᴛᴄʜ** » {raw_text0}\n\n**ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ ʙʏ »** {MR}"
 
             if "drive" in url:
                 try:
@@ -215,7 +215,7 @@ async def account_login(bot: Client, m: Message):
                     time.sleep(e.x)
                     continue
             else:
-                Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** @VEDxPW"
+                Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** @teamshaurya01"
                 prog = await m.reply_text(Show)
                 res_file = await helper.download_video(url, cmd, name)
                 filename = res_file
@@ -232,7 +232,7 @@ async def account_login(bot: Client, m: Message):
             await m.reply_text(f"**Downloading Interrupted **\n {str(e)}\n**Name** » {name}\n**Link** » `{url}`")
             continue
 
-    await m.reply_text("❚█═ 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𝕀ℕ𝔾 ℂ𝕆𝕄ℙ𝕃𝔼𝕋𝔼 ═█❚\n▼△▼△▼△ Λᴅᴀʀsʜ ʀᴀᴛʜᴀᴜʀ ▼△▼△▼△")
+    await m.reply_text("❚█═ 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𝕀ℕ𝔾 ℂ𝕆𝕄ℙ𝕃𝔼𝕋𝔼 ═█❚")
 
 print("Bot Started Sir")
 bot.run()
