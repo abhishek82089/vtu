@@ -1,7 +1,6 @@
 import os
 import time
 import datetime
-import aiohttp
 import aiofiles
 import asyncio
 import logging
